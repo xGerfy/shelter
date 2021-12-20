@@ -111,6 +111,10 @@ body {
     color: #292929;
     background-color: #F1CDB3;
     margin-bottom: 80px;
+    transition: .5s;
+}
+.header__content-btn:hover {
+    background-color: #FDDCC4;
 }
 .about__content {
     display: flex;
@@ -163,6 +167,7 @@ body {
 }
 .pets__slider {
     display: flex;
+    grid-gap: 53px;
     justify-content: space-between;
     align-items: center;
     padding: 60px 0;
@@ -174,14 +179,18 @@ body {
 }
 .slider__track {
     display: flex;
-    justify-content: space-between;
-    transition: .5s;
+    grid-gap: 90px;
+    transition: .4s;
 }
 .slider__item {
     height: 435px;
     text-align: center;
     border-radius: 9px;
     background-color: #FAFAFA;
+    transition: .3s;
+}
+.slider__item:hover {
+    background-color: #fff;
 }
 .card__name {
     font-family: 'Georgia';
@@ -202,17 +211,32 @@ body {
     border-color: #F1CDB3;
     padding: 15px 45px;
     margin-bottom: 30px;
+    transition: .3s;
+}
+.card__btn:hover {
+    background-color: #FDDCC4;
+    border-color: #FDDCC4;
 }
 .button__slider-prev,
 .button__slider-next {
     height: 52px;
     width: 52px;
+    border: solid 2px;
+    border-radius: 50%;
+    border-color: #F1CDB3;
+    color: #292929;
+    transition: .3s;
 }
-.button__slider-prev {
-    margin-right: 53px;
+.button__slider-prev:hover:enabled,
+.button__slider-next:hover:enabled {
+    border-color: #FDDCC4;
+    background-color: #FDDCC4;
 }
-.button__slider-next {
-    margin-left: 53px;
+.button__slider-prev:disabled,
+.button__slider-next:disabled {
+    color: #CDCDCD;
+    border-color: #CDCDCD;
+    cursor: inherit;
 }
 .pets__button {
     margin-bottom: 100px;
@@ -224,6 +248,10 @@ body {
     line-height: 22px;
     color: #292929;
     background-color: #F1CDB3;
+    transition: .5s;
+}
+.pets__button:hover {
+    background-color: #FDDCC4;
 }
 .help__content {
     text-align: center;
