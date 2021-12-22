@@ -46,6 +46,9 @@ body {
     align-items: center;
     margin-top: 60px;
 }
+.logo {
+    z-index: 999;
+}
 .title {
     font-family: 'Georgia';
     font-size: 32px;
@@ -168,7 +171,6 @@ body {
 .pets__slider {
     display: flex;
     grid-gap: 53px;
-    justify-content: space-between;
     align-items: center;
     padding: 60px 0;
     
@@ -194,8 +196,8 @@ body {
 }
 .card__name {
     font-family: 'Georgia';
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 17px;
+    line-height: 22px;
     color: #545454;
     letter-spacing: 2.1px;
     padding: 30px 0;
@@ -398,4 +400,276 @@ body {
     color: #F1CDB3;
     letter-spacing: 2.1px;
     margin-left: 20px;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    .header__top{
+        margin-top: 30px;
+    }
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .header__content-btn{
+        margin: 0 auto 100px;
+    }
+    .header__content-img {
+        height: 593px;
+        width: 569px;
+        margin: 0 0 0 139px;
+    }
+    .about__content {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 80px;
+        padding: 80px 139px 100px;
+    }
+    .pets__slider {
+        grid-gap: 12px;        
+    }
+    .slider__container {
+        width: 580px;
+    }
+    .slider__track {
+        grid-gap: 40px;
+    }
+    .donation__content{
+        display: flex;
+        flex-direction: column-reverse;
+        grid-gap: 60px;
+        padding: 80px 0 100px;
+        margin: 0 auto;
+        width: 707px;
+    }
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    .footer__text {
+        display: flex;
+        grid-gap: 60px;
+        margin: 0 auto 65px;
+    }
+    .left__text,
+    .right__text {
+    height: 234px;
+    }
+    .right__text {
+        margin: 0;
+    }
+    .footer__img {
+        height: 310px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+}
+@media (max-width: 320px) {
+    body._lock {
+        overflow: hidden;
+    }
+    .container {
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .menu__burger {
+       z-index: 2;
+    }
+    .burgerBtn {
+        height: 22px;
+        width: 30px;
+        margin-right: 43px;
+        transition: .6s;
+    }
+    .burgerBtn._active {
+        transform: rotate(-90deg);
+    }
+    .menu {
+        top: 0;
+        left: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        color: #FAFAFA;
+        background-color: #292929;
+        z-index: -1;
+        transform: translateX(100%);
+        overflow: auto;
+        transition: 0.5s ease-out;
+    }
+    .menu._active {
+        transform: translateX(0);
+    }
+    .menu__list {
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 40px;
+        margin: auto 0;
+    }
+    .menu__item {
+        margin: 0;
+    }
+    .menu__link {
+        font-size: 32px;
+        line-height: 51px;
+    }
+    .header__content {
+        text-align: center;
+    }
+    .heading {
+        font-size: 25px;
+        line-height: 32px;
+        width: 196px;
+        margin: 0 auto 42px;
+    }
+    .subheading {
+        font-size: 15px;
+        line-height: 24px;
+        width: 300px;
+        margin-bottom: 42px;
+    }
+    .header__content-img {
+        height: 271px;
+        width: 260px;
+        margin: 0 0 0 40px;
+    }
+    .about__content {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-gap: 42px;
+        padding: 42px 0;
+        text-align: center;
+    }
+    .about__item {
+        grid-gap: 23px;
+    }
+    .about__title {
+        font-size: 25px;
+        line-height: 32px;
+        width: 230px;
+        margin: 0 auto;
+    }
+    .about__p {
+        width: 270px;
+        margin: 0 15px;
+        text-align: justify;
+    }
+    .about__img {
+        height: 354px;
+        width: 260px;
+        margin: 0 auto;
+    }
+    .pets__title {
+        font-size: 25px;
+        line-height: 32px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 42px;
+    }
+    .pets__slider {
+        grid-gap: 12px;        
+    }
+    .button__slider-prev,
+    .button__slider-next {
+    position: absolute;
+    margin-top: 603px;
+    }
+    .button__slider-prev {
+        margin-left: 43px;
+    }
+    .button__slider-next {
+        margin-left: 175px;
+    }
+    .pets__button {
+        margin: 114px auto 42px;
+    }
+    .slider__container {
+        width: 270px;
+    }
+    .slider__track {
+        grid-gap: 0px;
+    }
+    .help__title{
+        font-size: 25px;
+        line-height: 32px;
+        color: #545454;
+        padding-top: 42px;
+        width: 220px;
+        margin: 0 auto;
+    }
+    .help__list {
+        display: flex;
+        align-items: start;
+        padding: 42px 5px;
+    }
+    .help__list-top,
+    .help__list-bot {
+    flex-direction: column;
+    grid-gap: 30px;
+    font-size: 15px;
+    line-height: 16px;
+    }
+    .help__list-bot {
+        padding: 0;
+    }
+    .donation__content {
+        padding: 42px 0;
+        width: 300px;
+    }
+    .donation__title {
+        font-size: 25px;
+        line-height: 32px;
+        text-align: center;
+        color: #545454;
+        width: 220px;
+        margin: 0 auto;
+    }
+    .name__bank {
+        letter-spacing: 0;
+        margin: 0 auto;
+    }
+    .donation__text {
+        height: 281px;
+        width: 300px;
+    }
+    .number {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .donation__dog {
+        height: 135px;
+        width: 260px;
+    }
+    .footer__content {
+        padding-top: 42px;
+    }
+    .footer__text {
+        flex-direction: column;
+        grid-gap: 40px;
+        margin: 0 auto 40px;
+    }
+    .left__title,
+    .right__title {
+        font-size: 25px;
+        line-height: 32px;
+        text-align: center;
+    }
+    .left__text {
+        align-items: center;
+        height: 208px;
+    }
+    .footer__img {
+        height: 269px;
+        width: 260px;
+    }
 }
