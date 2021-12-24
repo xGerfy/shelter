@@ -401,6 +401,90 @@ body {
     letter-spacing: 2.1px;
     margin-left: 20px;
 }
+.pets__header-top {
+    display: flex;
+    /* position: sticky; */
+    /* top: 0; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    background-color: #fff;
+}
+.our__pets-title {
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 35px;
+    color: #545454;
+    letter-spacing: 2.1px;
+}
+.pets__subtitle{
+    font-size: 13px;
+    line-height: 15px;
+    color: #292929;
+    letter-spacing: 1.6px;
+    margin-top: 10px;
+}
+.pets__menu-list {
+    display: flex;
+    grid-gap: 35px;
+}
+.pets__menu-item {
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 24px;
+    color: #545454;
+    transition: .3s;
+}
+.pets__menu-item:hover {
+    color: #292929;
+}
+.our__pets {
+    background-color: #F6F6F6;
+}
+.pets__content {
+    display: flex;
+    grid-gap: 60px;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 100px;
+    background-color: #F6F6F6;
+}
+.pets__content-title {
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    color: #545454;
+    letter-spacing: 2.1px;
+    width: 400px;
+    text-align: center;
+}
+.our__pets-cards {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 30px 40px;
+}
+.buttons{
+    display: flex;
+    grid-gap: 20px;
+}
+.btn__number {
+    background-color: #F1CDB3;
+}
+.buttons button {
+    height: 52px;
+    width: 52px;
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    border: solid 2px;
+    border-radius: 50%;
+    border-color: #F1CDB3;
+    color: #292929;
+    transition: .3s;
+}
 @media (max-width: 768px) {
     .container {
         max-width: 768px;
