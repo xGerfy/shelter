@@ -111,19 +111,35 @@ const createChunks = (items, size) => {
 }
 
 const chunks = createChunks(arr, 8)
-const currentPageNode = document.querySelector('.btn__number')
-const pageNum = +currentPageNode.innerHTML
 
-const showPage = (page) => {
-    currentPageNode.innerHTML = page
-    console.log(chunks[page - 1]);
+const showPage = (action) => {
+    const currentPageNode = document.querySelector('.btn__number')
+    const currentPage = +currentPageNode.innerHTML
+
+    let newPage = 1
+
+    if (action === 'prev') {
+        newPage = currentPage - 1
+    } else if (action === 'next') {
+        newPage = currentPage + 1
+    } else if (action === 'end') {
+        newPage = chunks.length
+    }
+
+    currentPageNode.innerHTML = newPage
+    console.log(chunks[newPage - 1])
 }
-showPage(pageNum)
+
+showPage()
 
 const prevBtn = document.querySelector('.btn__prev')
-prevBtn.addEventListener('click', () => {showPage(pageNum - 1)})
+prevBtn.addEventListener('click', () => { showPage('prev') })
 
 const nextBtn = document.querySelector('.btn__next')
-nextBtn.addEventListener('click', () => {showPage(pageNum + 1)})
+nextBtn.addEventListener('click', () => { showPage('next') })
 
+const startBtn = document.querySelector('.btn__start')
+startBtn.addEventListener('click', () => { showPage() })
 
+const endBtn = document.querySelector('.btn__end')
+endBtn.addEventListener('click', () => { showPage('end') })
