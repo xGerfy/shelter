@@ -470,7 +470,7 @@ body {
     grid-gap: 20px;
 }
 .btn__number {
-    background-color: #F1CDB3;
+    background-color: #f1cdb3;
 }
 .buttons button {
     height: 52px;
@@ -481,9 +481,15 @@ body {
     line-height: 23px;
     border: solid 2px;
     border-radius: 50%;
-    border-color: #F1CDB3;
+    border-color: #f1cdb3;
     color: #292929;
     transition: .3s;
+}
+.btn-disabled {
+    color: #CDCDCD !important;
+    border-color: #CDCDCD !important;
+    pointer-events: none;
+    cursor: default;
 }
 @media (max-width: 768px) {
     .container {
@@ -553,7 +559,9 @@ body {
         width: 300px;
         margin: 0 auto;
     }
-    
+    .our__pets-cards  {
+        margin: 0 63px;
+    }
 }
 @media (max-width: 320px) {
     body._lock {
@@ -755,5 +763,14 @@ body {
     .footer__img {
         height: 269px;
         width: 260px;
+    }
+    .pets__content-title {
+        font-size: 25px;
+        line-height: 32px;
+        width: 300px;
+
+    }
+    .buttons {
+        grid-gap: 10px;
     }
 }
